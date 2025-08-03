@@ -29,13 +29,13 @@ const SplashScreenPage = () => {
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-b from-[#5D28F4] to-[#8B6DFD] relative overflow-hidden">
       {/* Animated ping glow behind logo */}
-      <div className="absolute animate-ping inline-flex h-48 w-48 rounded-full bg-white opacity-10"></div>
+      <div className="absolute inline-flex h-48 w-48 rounded-full "></div>
 
       {/* Centered splash image */}
       <img
         src="/src/assets/images/jobup-icon.png"
         alt="JobUp Splash"
-        className="w-[60vw] h-[60vh] max-w-48 max-h-48 z-10"
+        className="w-[270px] h-[270px] z-10"
       />
 
       {/* No internet overlay */}

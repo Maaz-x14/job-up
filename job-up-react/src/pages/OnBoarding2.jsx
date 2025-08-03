@@ -18,7 +18,7 @@ export default function OnBoarding2() {
         </>
       }
       buttonText="Get Started"
-      onButtonClick={() => navigate("#")}
+      onButtonClick={() => navigate("/mainjobpage")}
       showBack={true}
     />
   );
