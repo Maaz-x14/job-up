@@ -7,7 +7,7 @@ import AuthLayout from "../components/AuthLayout";
 export default function OTPVerification() {
   const [otp, setOtp] = useState(["", "", "", ""]);
   const [focusedIndex, setFocusedIndex] = useState(null);
-  const [timer, setTimer] = useState(60);
+  const [timer, setTimer] = useState(30);
   const [resendClicked, setResendClicked] = useState(false);
   const inputs = useRef([]);
   const navigate = useNavigate();
@@ -43,7 +43,7 @@ export default function OTPVerification() {
 
   const handleResend = () => {
     if (timer === 0) {
-      setTimer(60);
+      setTimer(30);
       setResendClicked(true);
       // Trigger resend logic here
     }

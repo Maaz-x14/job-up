@@ -30,8 +30,8 @@ export default function OnboardingLayout({
 
         {showSkip && (
           <span
-            className="text-sm text-indigo-500 font-medium cursor-pointer"
-            onClick={() => navigate("/register")}
+            className="text-sm text-[#5424FD] font-medium cursor-pointer"
+            onClick={() => navigate("/mainjobpage")}
           >
             Skip
           </span>
@@ -46,7 +46,7 @@ export default function OnboardingLayout({
             key={index}
             className={`w-3 h-3 rounded-full ${
               index === currentPage
-                ? "bg-indigo-600"
+                ? "bg-[#5424FD]"
                 : "bg-gray-300"
             }`}
           ></span>

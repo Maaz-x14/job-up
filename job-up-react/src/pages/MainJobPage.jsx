@@ -7,9 +7,9 @@ import { FunnelIcon } from "@heroicons/react/24/outline";
 import { data } from "../data/jobs";
 
 const categorizedJobs = {
-  popular: data.slice(0, 3),
-  recommended: data.slice(1, 4),
-  recent: data.slice(2, 5),
+  popular: data.slice(0, 5),
+  recommended: data.slice(4, 11),
+  recent: data.slice(5, 8),
 };
 
 export default function JobsPage() {
@@ -42,7 +42,7 @@ export default function JobsPage() {
           {/* Search Bar with Filter Button */}
           <div className="mt-4 flex items-center gap-3">
             <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-            <button className="px-4 py-2 bg-white border border-indigo-200 text-indigo-600 rounded-lg shadow-sm hover:bg-indigo-50 flex items-center gap-2">
+            <button className="px-4 py-2 bg-white border border-indigo-200 text-[#5424FD] rounded-lg shadow-sm hover:bg-indigo-50 flex items-center gap-2">
               <FunnelIcon className="h-5 w-5" />
               <span>Filter</span>
             </button>
@@ -64,8 +64,8 @@ export default function JobsPage() {
             onClick={() => setActiveCategory(category)}
             className={`px-5 py-2 rounded-full text-sm font-medium transition ${
               activeCategory === category
-                ? "bg-indigo-600 text-white"
-                : "bg-indigo-50 text-indigo-600 hover:bg-indigo-100"
+                ? "bg-[#5424FD] text-white"
+                : "bg-indigo-50 text-[#5424FD] hover:bg-indigo-100"
             }`}
           >
             {category.charAt(0).toUpperCase() + category.slice(1)}

@@ -18,7 +18,7 @@ const NoInternet = ({ onRetry }) => {
         <p className="text-xs sm:text-sm text-gray-600 mb-6">
           Please check your internet connection
         </p>
-        <button className="text-sm sm:text-base bg-indigo-600 text-white py-2 px-6 rounded-md hover:bg-indigo-700">
+        <button className="text-sm sm:text-base bg-[#5424FD] text-white py-2 px-6 rounded-md hover:bg-[#5424FD]">
           Try Again
         </button>
       </div>

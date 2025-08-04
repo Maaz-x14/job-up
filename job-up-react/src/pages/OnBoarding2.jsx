@@ -14,7 +14,7 @@ export default function OnBoarding2() {
       title={
         <>
           Find your career successfully with{" "}
-          <span className="text-indigo-600">JobUp</span>. <br /> Let's begin
+          <span className="text-[#5424FD]">JobUp</span>. <br /> Let's begin
         </>
       }
       buttonText="Get Started"

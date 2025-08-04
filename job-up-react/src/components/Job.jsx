@@ -31,7 +31,7 @@ export function Job({
 
         <Link
           to={link}
-          className="text-indigo-600 bg-indigo-50 text-sm px-3 py-1.5 rounded-full flex items-center gap-1 hover:bg-indigo-100 transition"
+          className="text-[#5424FD] bg-indigo-50 text-sm px-3 py-1.5 rounded-full flex items-center gap-1 hover:bg-indigo-100 transition"
         >
           View
         </Link>
@@ -46,7 +46,7 @@ export function Job({
       {/* Description */}
       <p className="text-sm text-gray-700 line-clamp-2">
         {description}{" "}
-        <span className="text-indigo-500 font-medium cursor-pointer">
+        <span className="text-[#5424FD] font-medium cursor-pointer">
           Read More
         </span>
       </p>
