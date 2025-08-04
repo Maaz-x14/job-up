@@ -12,7 +12,13 @@ export default function JobFilters() {
 
   const jobTypes = ["Full-Time", "Part-Time", "Internship", "Contract Based"];
   const jobCategories = ["Onsite", "Remote", "Hybrid"];
-  const educationLevels = ["Diploma", "Undergraduate", "Graduation", "Post-Graduation", "Doctorate"];
+  const educationLevels = [
+    "Diploma",
+    "Undergraduate",
+    "Graduation",
+    "Post-Graduation",
+    "Doctorate",
+  ];
   const cities = ["Islamabad", "Lahore", "Karachi", "Rawalpindi"];
 
   const navigate = useNavigate();
@@ -28,8 +34,13 @@ export default function JobFilters() {
 
   return (
     <div className="w-full max-w-5xl mx-auto bg-white p-6 sm:p-8 rounded-xl shadow-lg">
-        <ArrowLeftIcon onClick={() => navigate("/mainjobpage")} className="h-[20px] w-[20px] absolute mt-2 hover:cursor-pointer bg-gray-200 m-2 rounded-xl" />
-      <h2 className="text-2xl sm:text-3xl text-center mb-6 text-gray-800">Filters</h2>
+      <ArrowLeftIcon
+        onClick={() => navigate("/mainjobpage")}
+        className="h-[20px] w-[20px] absolute mt-2 hover:cursor-pointer bg-gray-200 m-2 rounded-xl"
+      />
+      <h2 className="text-2xl sm:text-3xl text-center mb-6 text-gray-800">
+        Filters
+      </h2>
 
       {/* Job Type */}
       <div className="mb-6">
@@ -53,7 +64,9 @@ export default function JobFilters() {
 
       {/* Job Category */}
       <div className="mb-6">
-        <h3 className="text-sm font-semibold text-gray-700 mb-2">Job Category</h3>
+        <h3 className="text-sm font-semibold text-gray-700 mb-2">
+          Job Category
+        </h3>
         <div className="flex flex-wrap gap-3">
           {jobCategories.map((category) => (
             <button
@@ -74,24 +87,50 @@ export default function JobFilters() {
       {/* Experience */}
       <div className="mb-6">
         <h3 className="text-sm font-semibold text-gray-700 mb-2">Experience</h3>
-        <select
-          value={experience}
-          onChange={(e) => setExperience(e.target.value)}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-50"
-        >
-          <option value="">Choose experience level</option>
-          <option value="Entry">Entry Level</option>
-          <option value="Mid">Mid Level</option>
-          <option value="Senior">Senior Level</option>
-        </select>
+        <div className="relative">
+          <select
+            value={experience}
+            onChange={(e) => setExperience(e.target.value)}
+            className="w-full px-4 py-3 pr-10 bg-white border border-gray-300 rounded-xl shadow-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#5424FD] appearance-none"
+          >
+            <option value="">Choose experience level</option>
+            <option value="Less than 1 year">Less than 1 year</option>
+            <option value="1-3 Years">1-3 Years</option>
+            <option value="3-5 Years">3-5 Years</option>
+            <option value="5-10 Years">5-10 Years</option>
+            <option value="10+ Years">10+ Years</option>
+          </select>
+
+          {/* Custom dropdown arrow */}
+          <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center">
+            <svg
+              className="w-4 h-4 text-gray-500"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </div>
+        </div>
       </div>
 
       {/* Country & City */}
       <div className="mb-6">
-        <h3 className="text-sm font-semibold text-gray-700 mb-2">Select Country</h3>
+        <h3 className="text-sm font-semibold text-gray-700 mb-2">
+          Select Country
+        </h3>
         <div className="flex flex-wrap gap-4 mb-4">
           {["Pakistan", "International"].map((option) => (
-            <label key={option} className="flex items-center gap-2 text-gray-600">
+            <label
+              key={option}
+              className="flex items-center gap-2 text-gray-600"
+            >
               <input
                 type="radio"
                 value={option}
@@ -106,7 +145,9 @@ export default function JobFilters() {
 
         {country === "Pakistan" && (
           <div>
-            <h3 className="text-sm font-semibold text-gray-700 mb-2">Select City</h3>
+            <h3 className="text-sm font-semibold text-gray-700 mb-2">
+              Select City
+            </h3>
             <select className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-50">
               <option value="">Choose a city</option>
               {cities.map((city) => (
@@ -139,14 +180,18 @@ export default function JobFilters() {
 
       {/* Salary Range */}
       <div className="mb-6">
-        <h3 className="text-sm font-semibold text-gray-700 mb-2">Salary Range</h3>
+        <h3 className="text-sm font-semibold text-gray-700 mb-2">
+          Salary Range
+        </h3>
         <div className="flex flex-col gap-2">
           <input
             type="range"
             min="5000"
             max="5000000"
             value={salaryRange[0]}
-            onChange={(e) => setSalaryRange([Number(e.target.value), salaryRange[1]])}
+            onChange={(e) =>
+              setSalaryRange([Number(e.target.value), salaryRange[1]])
+            }
             className="w-full"
           />
           <input
@@ -154,10 +199,14 @@ export default function JobFilters() {
             min="5000"
             max="5000000"
             value={salaryRange[1]}
-            onChange={(e) => setSalaryRange([salaryRange[0], Number(e.target.value)])}
+            onChange={(e) =>
+              setSalaryRange([salaryRange[0], Number(e.target.value)])
+            }
             className="w-full"
           />
-          <p className="text-sm text-gray-500">₨{salaryRange[0]} – ₨{salaryRange[1]}</p>
+          <p className="text-sm text-gray-500">
+            ₨{salaryRange[0]} – ₨{salaryRange[1]}
+          </p>
         </div>
       </div>
 
@@ -169,9 +218,7 @@ export default function JobFilters() {
         >
           Reset
         </button>
-        <button
-          className="w-full sm:w-auto px-4 py-2 bg-[#5424FD] text-white rounded-lg hover:bg-[#3d1ed1] transition"
-        >
+        <button className="w-full sm:w-auto px-4 py-2 bg-[#5424FD] text-white rounded-lg hover:bg-[#3d1ed1] transition">
           Apply
         </button>
       </div>
