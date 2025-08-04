@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-[#09005b] text-white">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12-Column Grid Shell</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-sans p-4">
+
+  <h1 class="text-3xl font-bold underline text-white mb-4">Hello world!</h1>
+
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-12 sm:gap-4">
+
+    <header role="banner"
+      class="col-span-1 sm:col-span-12 bg-white text-black p-4 rounded-xl shadow-lg sticky top-0 z-50">
+      <h1 class="sm:text-[2em] md:text-[3em] lg:text-[4em] xl:text-[5em]  font-bold">Planet Beyond</h1>
+      <p class="text-gray-600">Planet Beyond website page</p>
+    </header>
+
+    <nav role="navigation" aria-label="Main Navigation"
+      class="col-span-1 sm:col-span-12 bg-white text-black p-4 rounded-xl shadow-lg">
+      <ul class="flex gap-4">
+        <li><a href="/" class="text-blue-600 hover:underline">Home</a></li>
+        <li><a href="#" class="text-blue-600 hover:underline">About</a></li>
+        <li><a href="#" class="text-blue-600 hover:underline">Services</a></li>
+        <li><a href="#" class="text-blue-600 hover:underline">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main role="main" aria-label="Main section"
+      class="col-span-1 sm:col-span-8 bg-white text-black p-4 rounded-xl shadow-lg">
+      <article>
+        <h2 class="text-xl font-bold mb-2">Welcome to My Website</h2>
+        <p class="mb-4">This is the main content area of the page.</p>
+        <p class="text-justify leading-relaxed text-sm sm:text-base">
+        </p>
+      </article>
+    </main>
+
+    <aside role="complementary" class="col-span-1 sm:col-span-4 bg-white text-black p-4 rounded-xl shadow-lg">
+      <h3 class="text-lg font-semibold mb-2">Related Links</h3>
+      <ul class="list-disc list-inside space-y-1">
+        <li><a href="#" class="text-blue-600 hover:underline">Our Blog</a></li>
+        <li><a href="#" class="text-blue-600 hover:underline">FAQ</a></li>
+      </ul>
+    </aside>
+
+    <footer role="contentinfo" aria-label="Site footer"
+      class="col-span-1 sm:col-span-12 bg-white text-black p-4 rounded-xl shadow-lg">
+      <p class="text-center text-sm">&copy; 2025 My Website. All rights reserved.</p>
+    </footer>
+  </div>
+
+</body>
+
+</html>
